@@ -7,6 +7,9 @@ namespace VacationRental.Api.Models
         public int Id { get; set; }
         public int RentalId { get; set; }
         public DateTime Start { get; set; }
+        public DateTime Checkout => Start.AddDays(Nights);
         public int Nights { get; set; }
+        public int Unit { get; set; }
+        
     }
 }
